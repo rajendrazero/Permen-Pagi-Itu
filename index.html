@@ -1,0 +1,47 @@
+<!DOCTYPE html>  <html lang="id">  <head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Galeri Raj</title>    <link rel="stylesheet" href="style.css">  
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">  
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>  
+</head>  
+<body>    <!-- Navbar -->    <nav class="navbar">  
+    <button class="nav-toggle" onclick="toggleNavbar()">  
+      <i class="fa-solid fa-bars"></i> Pilih Judul  
+    </button>  
+    <ul class="nav-list" id="nav-list"></ul>  
+  </nav>    <div class="container">  
+    <h2 class="judul" id="judul">Permen Pagi Itu</h2>  
+    <div class="image-container" id="image-box"></div>  
+    <div class="text-container" id="text-box"></div>  <div class="progress-bar">  
+  <div class="progress" id="progress-bar"></div>  
+</div>  
+
+<p id="page-indicator">1 / 8</p>  
+
+<div class="buttons">  
+  <button onclick="prevText()"><i class="fa-solid fa-arrow-left"></i> <span class="btn-text">Kembali</span></button>  
+  <button onclick="nextText()"><i class="fa-solid fa-arrow-right"></i> <span class="btn-text">Lanjut</span></button>  
+  <button onclick="toggleManualMode()" id="manual-btn">  
+    <i class="fa-solid fa-hand-pointer"></i> <span class="btn-text">Manual Mode: OFF</span>  
+  </button>  
+  <button onclick="toggleMusic()" id="music-btn">  
+    <i class="fa-solid fa-play"></i> <span class="btn-text">Mainkan Musik</span>  
+  </button>  
+  <button onclick="toggleTheme()" id="theme-btn">  
+    <i class="fa-solid fa-sun"></i> <span class="btn-text">Ganti Tema</span>  
+  </button>  
+    
+    <!-- Pemilihan Lagu -->  
+  <div class="music-selector">  
+    <select id="music-select" class="custom-select"></select>  
+  </div>  
+    
+</div>
+
+  </div>    <audio id="bg-music" loop preload="auto">  
+    <source src="monokrom.mp3" type="audio/mpeg">  
+  </audio>    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>    <script src="script.js"></script>  </body>  
+</html>  
+
